@@ -3,6 +3,7 @@ import logo from '../assets/img/logo-v1.png';
 import { HashLink } from 'react-router-hash-link';
 import { useRef } from 'react';
 import { useState } from 'react';
+import { links } from '../data/menu-links';
 
 export default function Nav() {
 	const [isOpen, setOpen] = useState(false);
@@ -24,34 +25,22 @@ export default function Nav() {
 			<nav className="nav">
 				<img
 					src={logo}
-					alt="logo"
+					alt="EPBF logo"
 					className="nav-logo"
 				/>
 				<ul className="nav-links">
-					<HashLink
-						smooth
-						className="nav-links-link"
-						to="#aboutme"
-						onClick={scrolLWithUseRef}
-					>
-						A Propos
-					</HashLink>
-					<HashLink
-						smooth
-						className="nav-links-link"
-						to="#projects"
-						onClick={scrolLWithUseRef}
-					>
-						Projects
-					</HashLink>
-					<HashLink
-						smooth
-						className="nav-links-link"
-						to="#contactme"
-						onClick={scrolLWithUseRef}
-					>
-						Contact
-					</HashLink>
+					{links.map(function (link) {
+						return (
+							<HashLink
+								smooth
+								className="nav-links-link"
+								to={link.url}
+								onClick={scrolLWithUseRef}
+							>
+								{link.name}
+							</HashLink>
+						);
+					})}
 				</ul>
 			</nav>
 			<div className="burger-nav">
@@ -60,30 +49,18 @@ export default function Nav() {
 					onClose={handleIsClosed}
 					isOpen={isOpen}
 				>
-					<HashLink
-						onClick={handleIsClosed}
-						smooth
-						className="menu-item"
-						to="#aboutme"
-					>
-						A Propos
-					</HashLink>
-					<HashLink
-						onClick={handleIsClosed}
-						smooth
-						className="menu-item"
-						to="#projects"
-					>
-						Projets
-					</HashLink>
-					<HashLink
-						onClick={handleIsClosed}
-						smooth
-						className="menu-item"
-						to="#contactme"
-					>
-						Contact
-					</HashLink>
+					{links.map(function (link) {
+						return (
+							<HashLink
+								onClick={handleIsClosed}
+								smooth
+								className="menu-item"
+								to={link.url}
+							>
+								{link.name}
+							</HashLink>
+						);
+					})}
 				</Menu>
 			</div>
 		</div>
