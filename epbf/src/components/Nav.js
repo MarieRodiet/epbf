@@ -1,9 +1,9 @@
 import { slide as Menu } from 'react-burger-menu';
-import logo from '../assets/img/logo-v1.png';
 import { HashLink } from 'react-router-hash-link';
 import { useRef } from 'react';
 import { useState } from 'react';
 import { links } from '../data/menu-links';
+import LogoBox from './LogoBox';
 
 export default function Nav() {
 	const [isOpen, setOpen] = useState(false);
@@ -15,7 +15,7 @@ export default function Nav() {
 		setOpen(false);
 	};
 
-	const LinkOne = (useRef < HTMLInputElement) | (null > null);
+	const LinkOne = useRef < HTMLInputElement;
 	const scrolLWithUseRef = () => {
 		LinkOne.current?.scrollIntoView({ block: 'start', behavior: 'smooth' });
 	};
@@ -23,21 +23,18 @@ export default function Nav() {
 	return (
 		<div>
 			<nav className="nav">
-				<img
-					src={logo}
-					alt="EPBF logo"
-					className="nav-logo"
-				/>
+				<LogoBox />
 				<ul className="nav-links">
-					{links.map(function (link) {
+					{links.map(({ url, name }, index) => {
 						return (
 							<HashLink
 								smooth
 								className="nav-links-link"
-								to={link.url}
+								to={url}
 								onClick={scrolLWithUseRef}
+								key={index}
 							>
-								{link.name}
+								{name}
 							</HashLink>
 						);
 					})}
@@ -49,15 +46,16 @@ export default function Nav() {
 					onClose={handleIsClosed}
 					isOpen={isOpen}
 				>
-					{links.map(function (link) {
+					{links.map(({ url, name }, index) => {
 						return (
 							<HashLink
 								onClick={handleIsClosed}
 								smooth
 								className="menu-item"
-								to={link.url}
+								to={url}
+								key={index}
 							>
-								{link.name}
+								{name}
 							</HashLink>
 						);
 					})}

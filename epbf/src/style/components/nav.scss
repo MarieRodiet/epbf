@@ -6,9 +6,16 @@
 		display: flex;
 		padding: 40px 8%;
 
-		&-logo {
-			width: 100%;
-			max-width: 60px;
+		&-logobox {
+			width: 100px;
+			display: flex;
+			&-logo {
+				width: 100%;
+				max-width: 60px;
+			}
+			&-epbf {
+				display: none;
+			}
 		}
 		&-links {
 			list-style: none;
@@ -37,8 +44,18 @@
 		padding: 40px 100px;
 		max-width: 1400px;
 		margin: 0 auto;
-		&-logo {
-			max-width: 80px;
+		&-logobox {
+			width: 100px;
+			display: flex;
+			&-logo {
+				width: 100%;
+				max-width: 60px;
+			}
+			&-epbf {
+				display: block;
+				color: $ocean-blue;
+				max-width: 150px;
+			}
 		}
 		&-links {
 			@include typo-size($main_font, map-get($font-sizes, sl));
