@@ -1,0 +1,8 @@
+@mixin box-shadow($x, $y, $blurr) {
+	box-shadow: $x $y $blurr darken(#565656, 20%);
+}
+
+@mixin typo-size($typo, $size) {
+	font-family: $typo;
+	font-size: $size;
+}

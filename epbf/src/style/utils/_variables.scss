@@ -1,0 +1,29 @@
+$white: #ffffff;
+$black: #0a0a0a;
+$sky-blue: #8ecae6;
+$ocean-blue: #219ebc;
+$night-blue: #023047;
+$light-gray: #f6f4f4c8;
+$dark-gray: #565656;
+
+$main_font: 'Cinzel', serif;
+$second_font: 'Josefin Sans', sans-serif;
+$third_font: 'Oswald', sans-serif;
+
+$breakpoints: (
+	tablet: 769px,
+	desktop: 1023px,
+);
+
+$font-sizes: (
+	xxxl: 7em,
+	xxl: 4.5em,
+	xl: 3.4em,
+	sxl: 3.2em,
+	l: 2em,
+	sl: 1.8em,
+	s: 1.5em,
+	ss: 1.4em,
+	xs: 1.1em,
+	xxs: 0.9em,
+);
