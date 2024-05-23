@@ -1,5 +1,5 @@
 import { slide as Menu } from 'react-burger-menu';
-import { HashLink } from 'react-router-hash-link';
+import { Link } from 'react-router-dom';
 import { useRef } from 'react';
 import { useState } from 'react';
 import { links } from '../data/menu-links';
@@ -27,7 +27,7 @@ export default function Nav() {
 				<ul className="nav-links">
 					{links.map(({ url, name }, index) => {
 						return (
-							<HashLink
+							<Link
 								smooth
 								className="nav-links-link"
 								to={url}
@@ -35,7 +35,7 @@ export default function Nav() {
 								key={index}
 							>
 								{name}
-							</HashLink>
+							</Link>
 						);
 					})}
 				</ul>
@@ -48,7 +48,7 @@ export default function Nav() {
 				>
 					{links.map(({ url, name }, index) => {
 						return (
-							<HashLink
+							<Link
 								onClick={handleIsClosed}
 								smooth
 								className="menu-item"
@@ -56,7 +56,7 @@ export default function Nav() {
 								key={index}
 							>
 								{name}
-							</HashLink>
+							</Link>
 						);
 					})}
 				</Menu>

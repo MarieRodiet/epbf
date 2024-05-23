@@ -1,7 +1,10 @@
 import '../style/base/globals.scss';
-import Nav from '../components/Nav';
-import SermonPreview from '../components/SermonPreview';
-import { HashRouter } from 'react-router-dom';
+import Nav from './../components/Nav';
+import JeSuisNouveau from './JeSuisNouveau';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import QuiNousSommes from './QuiNousSommes';
+import SermonPreview from './../components/SermonPreview';
+import Accueil from './Accueil';
 
 function App() {
 	return (
@@ -9,15 +12,29 @@ function App() {
 			className="App"
 			id="outer-container"
 		>
-			<div className="bg"></div>
-			<div className="bg bg2"></div>
-			<div className="bg bg3"></div>
-			<div className="content"></div>
-
-			<HashRouter>
-				<Nav />
+			<BrowserRouter>
 				<SermonPreview />
-			</HashRouter>
+				<div className="bg"></div>
+				<div className="bg bg2"></div>
+				<div className="bg bg3"></div>
+				<div className="content"></div>
+				<Nav />
+				<Routes>
+					<Route
+						path="/"
+						element={<Accueil />}
+					/>
+
+					<Route
+						path="/quinoussommes"
+						element={<QuiNousSommes />}
+					/>
+					<Route
+						path="/jesuisnouveau"
+						element={<JeSuisNouveau />}
+					/>
+				</Routes>
+			</BrowserRouter>
 		</div>
 	);
 }

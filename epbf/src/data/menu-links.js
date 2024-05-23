@@ -1,18 +1,18 @@
 export const links = [
 	{
-		url: '#jesuisnouveau',
+		url: '/jesuisnouveau',
 		name: 'Je suis nouveau',
 	},
 	{
-		url: '#quisommesnous',
+		url: '/quinoussommes',
 		name: 'Qui sommes-nous',
 	},
 	{
-		url: '#quoideneuf',
+		url: '/quoideneuf',
 		name: 'Quoi de neuf',
 	},
 	{
-		url: '#messages',
+		url: '/messages',
 		name: 'Messages',
 	},
 ];
