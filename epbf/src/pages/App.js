@@ -3,8 +3,9 @@ import Nav from './../components/Nav';
 import JeSuisNouveau from './JeSuisNouveau';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import QuiNousSommes from './QuiNousSommes';
-import SermonPreview from './../components/SermonPreview';
 import Accueil from './Accueil';
+import VieDeglise from './VieDeglise';
+import Messages from './Messages';
 
 function App() {
 	return (
@@ -13,7 +14,6 @@ function App() {
 			id="outer-container"
 		>
 			<BrowserRouter>
-				<SermonPreview />
 				<div className="bg"></div>
 				<div className="bg bg2"></div>
 				<div className="bg bg3"></div>
@@ -24,14 +24,22 @@ function App() {
 						path="/"
 						element={<Accueil />}
 					/>
-
+					<Route
+						path="/jesuisnouveau"
+						element={<JeSuisNouveau />}
+					/>
 					<Route
 						path="/quinoussommes"
 						element={<QuiNousSommes />}
 					/>
+
 					<Route
-						path="/jesuisnouveau"
-						element={<JeSuisNouveau />}
+						path="/viedeglise"
+						element={<VieDeglise />}
+					/>
+					<Route
+						path="/messages"
+						element={<Messages />}
 					/>
 				</Routes>
 			</BrowserRouter>

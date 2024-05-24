@@ -4,7 +4,7 @@ import { useRef } from 'react';
 import { useState } from 'react';
 import { links } from '../data/menu-links';
 import LogoBox from './LogoBox';
-
+import logo from '../assets/img/logo-v1.png';
 export default function Nav() {
 	const [isOpen, setOpen] = useState(false);
 
@@ -46,6 +46,13 @@ export default function Nav() {
 					onClose={handleIsClosed}
 					isOpen={isOpen}
 				>
+					<a href="/">
+						<img
+							src={logo}
+							alt="EPBF logo"
+							className="burger-nav-logo"
+						/>
+					</a>
 					{links.map(({ url, name }, index) => {
 						return (
 							<Link

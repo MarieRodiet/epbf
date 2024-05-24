@@ -9,12 +9,14 @@
 		&-logobox {
 			width: 100px;
 			display: flex;
-			&-logo {
-				width: 100%;
-				max-width: 60px;
-			}
-			&-epbf {
-				display: none;
+			&-link {
+				&-logo {
+					width: 100%;
+					max-width: 60px;
+				}
+				&-epbf {
+					display: none;
+				}
 			}
 		}
 		&-links {
@@ -24,8 +26,9 @@
 			width: 100%;
 			justify-content: space-around;
 			align-items: center;
-			@include typo-size($main_font, map-get($font-sizes, s));
+
 			&-link {
+				@include typo-size($main_font, map-get($font-sizes, ss));
 				text-decoration: none;
 				color: $black;
 				margin: 0 -0.25rem;
@@ -41,24 +44,32 @@
 	}
 
 	@media (min-width: map-get($breakpoints, desktop)) {
-		padding: 40px 100px;
-		max-width: 1400px;
+		padding: 30px 50px;
+		max-width: 1800px;
 		margin: 0 auto;
 		&-logobox {
-			width: 100px;
-			display: flex;
-			&-logo {
-				width: 100%;
-				max-width: 60px;
-			}
-			&-epbf {
-				display: block;
-				color: $ocean-blue;
-				max-width: 150px;
+			width: 270px;
+			&-link {
+				text-decoration: none;
+				display: flex;
+				flex-direction: row;
+
+				&-logo {
+					width: 60px;
+				}
+				&-epbf {
+					padding-top: 10px;
+					padding-left: 5px;
+					display: block;
+					color: $ocean-blue;
+					width: 190px;
+				}
 			}
 		}
 		&-links {
-			@include typo-size($main_font, map-get($font-sizes, sl));
+			&-link {
+				@include typo-size($main_font, map-get($font-sizes, s));
+			}
 		}
 	}
 }
@@ -80,7 +91,7 @@
 
 	/* Color/shape of burger icon bars on hover*/
 	.bm-burger-bars-hover {
-		background: lighten($color: $black, $amount: 40);
+		background: lighten($color: $night-blue, $amount: 1);
 	}
 
 	/* Position and sizing of clickable cross button */
@@ -91,7 +102,11 @@
 
 	/* Color/shape of close button cross */
 	.bm-cross {
-		background: $white;
+		background: $black;
+	}
+
+	&-logo {
+		width: 60px;
 	}
 
 	/*
@@ -105,7 +120,7 @@
 
 	/* General sidebar styles */
 	.bm-menu {
-		background: $night-blue;
+		background: $white;
 		padding: 2.5em 2em 0;
 		font-weight: 300;
 		@include typo-size($main_font, map-get($font-sizes, xs));
@@ -125,7 +140,7 @@
 	/* Individual item */
 	.bm-item {
 		display: inline-block;
-		color: $white;
+		color: $ocean-blue;
 		margin-bottom: 20px;
 		text-align: left;
 		text-decoration: none;
@@ -133,7 +148,7 @@
 	}
 
 	.bm-item:hover {
-		color: #ffffff;
+		color: $night-blue;
 	}
 
 	/* Styling of overlay */

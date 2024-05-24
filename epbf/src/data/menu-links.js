@@ -8,8 +8,8 @@ export const links = [
 		name: 'Qui sommes-nous',
 	},
 	{
-		url: '/quoideneuf',
-		name: 'Quoi de neuf',
+		url: '/viedeglise',
+		name: "Vie d'église",
 	},
 	{
 		url: '/messages',
