@@ -23,7 +23,7 @@ export const visions = [
 	},
 ];
 export const presentationTitre = "Venez découvrir l'amour infini de Dieu !";
-export const presentation =
+export const presentationTexte =
 	"Nous croyons en un Dieu d'amour infini, dont la puissance et la grâce transcendent toute compréhension humaine. " +
 	"Jean 3:16 proclame : 'Car Dieu a tant aimé le monde qu'il a donné son Fils unique, afin que quiconque croit en lui ne périsse point," +
 	" mais qu'il ait la vie éternelle'. Cet amour et son pouvoir rédempteur ont été témoignés par son sacrifice à la croix et par sa Résurrection." +

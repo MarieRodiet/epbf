@@ -2,13 +2,13 @@ import Bandeau from '../components/Bandeau';
 import bandeauImg from '../assets/img/bandeau/jesuisnouveau.jpg';
 
 const Accueil = () => {
+	const titre = 'Accueil';
 	return (
 		<div>
 			<Bandeau
 				pictureFile={bandeauImg}
-				titre="Je suis Nouveau"
+				titre={titre}
 			/>
-			<h1>Accueil</h1>
 		</div>
 	);
 };

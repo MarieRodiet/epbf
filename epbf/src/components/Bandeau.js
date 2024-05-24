@@ -6,7 +6,7 @@ const Bandeau = ({ pictureFile, titre }) => {
 				src={pictureFile}
 				alt={titre}
 			/>
-			<p className="bandeau-titre">{titre}</p>
+			<h1 className="bandeau-titre">{titre}</h1>
 		</div>
 	);
 };

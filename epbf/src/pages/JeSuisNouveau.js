@@ -1,5 +1,16 @@
+import Bandeau from '../components/Bandeau';
+import bandeauImg from '../assets/img/bandeau/jesuisnouveau.jpg';
+
 const JeSuisNouveau = () => {
-	return <div>Je suis Nouveau</div>;
-}
+	const titre = 'Je suis nouveau';
+	return (
+		<div>
+			<Bandeau
+				pictureFile={bandeauImg}
+				titre={titre}
+			/>
+		</div>
+	);
+};
 
 export default JeSuisNouveau;
