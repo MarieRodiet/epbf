@@ -1,11 +1,12 @@
 const Bandeau = ({ pictureFile, titre }) => {
 	return (
 		<div className="bandeau">
-			<img className="bandeau-img"
+			<img
+				className="bandeau-img"
 				src={pictureFile}
 				alt={titre}
 			/>
-            <p>{titre}</p>
+			<p className="bandeau-titre">{titre}</p>
 		</div>
 	);
 };
