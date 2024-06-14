@@ -1,10 +1,35 @@
 .bandeau {
+	position: relative;
+	color: white;
 	&-img {
 		object-fit: cover;
-		object-position: 20% 80%;
 		height: 300px;
 		width: 100%;
+
+		object-position: 20% 80%;
+		@media (min-width: map-get($breakpoints, tablet)) {
+			object-position: 20% 70%;
+		}
+
+		@media (min-width: map-get($breakpoints, desktop)) {
+			object-position: 20% 80%;
+		}
 	}
 	&-titre {
+		position: absolute;
+		top: 50%;
+		width: 500px;
+
+		left: 5%;
+		@include typo-size($main_font, map-get($font-sizes, xl));
+
+		@media (min-width: map-get($breakpoints, tablet)) {
+			left: 10%;
+			@include typo-size($main_font, map-get($font-sizes, xl));
+		}
+
+		@media (min-width: map-get($breakpoints, desktop)) {
+			@include typo-size($main_font, map-get($font-sizes, xxl));
+		}
 	}
 }
